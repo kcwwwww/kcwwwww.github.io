@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/path/to/parallax.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=He, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script>
+    $('.parallax-window').parallax({imageSrc: 'https://i.imgur.com/vIR8x17.jpg'});
+    </script>
 <style>
     .img-wrapper{
         width:100%
@@ -14,12 +19,25 @@
         width:100%;
         height:auto;
     }
+
+    .parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+    #welcome {
+    text-align: center;
+    font-size: 32px;
+    color:grey
+    }
 </style>
 </head>
 <body>
+    <div id="welcome">
+    Hello Wai
+    </div>
     <div class="img-wrapper">
-        <img class="testing" src="https://i.imgur.com/vIR8x17.jpg">
+        <img class="parallax-window" data-parallax="scroll" data-image-src="https://i.imgur.com/vIR8x17.jpg">
 </div>
-Hello Wai
+
 </body>
 </html>
